@@ -37,7 +37,7 @@ class Button extends StatelessWidget {
       width: double.infinity,
       height: 52,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           side: getStyles()["side"],
           backgroundColor: getStyles()["background"],

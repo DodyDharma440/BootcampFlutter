@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sanberappflutter/components/button.dart';
+import 'package:sanberappflutter/home_page.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});
@@ -42,7 +43,12 @@ class GetStartedPage extends StatelessWidget {
               ),
               Button(
                 text: "Masuk",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomePage()),
+                  );
+                },
               ),
               const SizedBox(
                 height: 21,
