@@ -34,30 +34,27 @@ class DetailNews extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: ClipOval(
-                        child: Material(
-                          color: Colors.black,
-                          child: InkWell(
-                            splashColor: Colors.black87,
-                            onTap: () {},
-                            child: const SizedBox(
-                              width: 40,
-                              height: 40,
-                              child: Column(
-                                children: [
-                                  Spacer(),
-                                  Icon(
-                                    Icons.arrow_back,
-                                    size: 16,
-                                    color: Colors.white,
-                                  ),
-                                  Spacer(),
-                                ],
-                              ),
+                    ClipOval(
+                      child: Material(
+                        color: Colors.black,
+                        child: InkWell(
+                          splashColor: Colors.black87,
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: const SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: Column(
+                              children: [
+                                Spacer(),
+                                Icon(
+                                  Icons.arrow_back,
+                                  size: 16,
+                                  color: Colors.white,
+                                ),
+                                Spacer(),
+                              ],
                             ),
                           ),
                         ),

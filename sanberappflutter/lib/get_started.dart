@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sanberappflutter/components/button.dart';
-import 'package:sanberappflutter/home_page.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});
@@ -19,8 +18,10 @@ class GetStartedPage extends StatelessWidget {
                 width: double.infinity,
                 height: 330,
                 decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assets/image_news.png"))),
+                  image: DecorationImage(
+                    image: AssetImage("assets/image_news.png"),
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 37,
@@ -44,10 +45,7 @@ class GetStartedPage extends StatelessWidget {
               Button(
                 text: "Masuk",
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
-                  );
+                  Navigator.pushReplacementNamed(context, "/main");
                 },
               ),
               const SizedBox(
