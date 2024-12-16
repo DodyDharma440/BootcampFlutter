@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sanberappflutter/routes/routes.dart';
+import 'package:sanberappflutter/user/pages/user_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: "/",
-      routes: Routes.routeList,
+    return const MaterialApp(
+      home: UserPage(),
     );
   }
 }
