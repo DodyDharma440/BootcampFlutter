@@ -8,11 +8,12 @@ class Button extends StatelessWidget {
   final VoidCallback onPressed;
   final ButtonVariant variant;
 
-  const Button(
-      {super.key,
-      required this.text,
-      required this.onPressed,
-      this.variant = ButtonVariant.filled});
+  const Button({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    this.variant = ButtonVariant.filled,
+  });
 
   Map<String, dynamic> getStyles() {
     switch (variant) {

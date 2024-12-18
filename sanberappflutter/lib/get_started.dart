@@ -45,7 +45,7 @@ class GetStartedPage extends StatelessWidget {
               Button(
                 text: "Masuk",
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, "/main");
+                  Navigator.pushReplacementNamed(context, "/sign-in");
                 },
               ),
               const SizedBox(
@@ -53,7 +53,9 @@ class GetStartedPage extends StatelessWidget {
               ),
               Button(
                 text: "Mendaftar",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/sign-up");
+                },
                 variant: ButtonVariant.outline,
               ),
               const Spacer(),
