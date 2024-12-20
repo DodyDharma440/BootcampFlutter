@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sanberappflutter/components/button.dart';
 import 'package:sanberappflutter/components/custom_text_form_field.dart';
 
@@ -40,7 +41,7 @@ class _SignInState extends State<SignIn> {
               TextButton(
                 child: const Text('Tutup'),
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  Get.back();
                 },
               ),
             ],
@@ -59,8 +60,7 @@ class _SignInState extends State<SignIn> {
         email: emailControl.text,
         password: passControl.text,
       );
-      if (!mounted) return;
-      Navigator.pushNamed(context, "/main");
+      Get.offNamed("/main");
     } on FirebaseAuthException catch (e) {
       var message = "";
       if (e.code == 'user-not-found') {
@@ -83,7 +83,7 @@ class _SignInState extends State<SignIn> {
               TextButton(
                 child: const Text('Tutup'),
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  Get.back();
                 },
               ),
             ],
@@ -209,7 +209,7 @@ class _SignInState extends State<SignIn> {
                 const Text("Belum punya akun?"),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, "/sign-up");
+                    Get.toNamed("/sign-up");
                   },
                   child: const Text(
                     " Mendaftar",

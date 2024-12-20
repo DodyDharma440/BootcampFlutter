@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetailNews extends StatelessWidget {
-  final Map<String, dynamic> item;
-
-  const DetailNews({super.key, required this.item});
+  const DetailNews({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var item = Get.arguments as Map<String, dynamic>;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Stack(
@@ -40,7 +41,7 @@ class DetailNews extends StatelessWidget {
                         child: InkWell(
                           splashColor: Colors.black87,
                           onTap: () {
-                            Navigator.pop(context);
+                            Get.back();
                           },
                           child: const SizedBox(
                             width: 40,
@@ -60,7 +61,7 @@ class DetailNews extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 300),
+                    const SizedBox(height: 375),
                     Row(
                       children: [
                         Container(

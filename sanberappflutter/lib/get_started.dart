@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sanberappflutter/components/button.dart';
 
@@ -45,7 +46,7 @@ class GetStartedPage extends StatelessWidget {
               Button(
                 text: "Masuk",
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, "/sign-in");
+                  Get.toNamed("/sign-in");
                 },
               ),
               const SizedBox(
@@ -54,7 +55,7 @@ class GetStartedPage extends StatelessWidget {
               Button(
                 text: "Mendaftar",
                 onPressed: () {
-                  Navigator.pushNamed(context, "/sign-up");
+                  Get.toNamed("/sign-up");
                 },
                 variant: ButtonVariant.outline,
               ),

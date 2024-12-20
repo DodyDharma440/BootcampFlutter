@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sanberappflutter/components/button.dart';
 import 'package:sanberappflutter/components/custom_text_form_field.dart';
 
@@ -48,7 +49,7 @@ class _SignUpState extends State<SignUp> {
               TextButton(
                 child: const Text('Tutup'),
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  Get.back();
                 },
               ),
             ],
@@ -68,7 +69,7 @@ class _SignUpState extends State<SignUp> {
         password: passControl.text,
       );
       if (!mounted) return;
-      Navigator.pushNamed(context, "/main");
+      Get.toNamed("/main");
     } on FirebaseAuthException catch (e) {
       var message = "";
       if (e.code == 'weak-password') {
@@ -91,7 +92,7 @@ class _SignUpState extends State<SignUp> {
               TextButton(
                 child: const Text('Tutup'),
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  Get.back();
                 },
               ),
             ],
@@ -218,7 +219,7 @@ class _SignUpState extends State<SignUp> {
                 const Text("Sudah punya akun? silahkan"),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, "/sign-in");
+                    Get.toNamed("/sign-in");
                   },
                   child: const Text(
                     " masuk",

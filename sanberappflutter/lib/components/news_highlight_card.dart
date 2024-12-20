@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sanberappflutter/detail_news.dart';
 
 class NewsHighlightCard extends StatelessWidget {
   final Map<String, dynamic> item;
@@ -14,10 +14,7 @@ class NewsHighlightCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => DetailNews(item: item)),
-        );
+        Get.toNamed("/news-detail", arguments: item);
       },
       child: DefaultTextStyle.merge(
         style: const TextStyle(color: Colors.white),
